@@ -3,10 +3,13 @@ import subprocess
 from tkinter import *
 from tkinter.ttk import *
 from PIL import Image, ImageTk
+import speech_recognition as sr
+import pyttsx3   
 
-def start_Jarvis(event):
-    subprocess.Popen(['python', 'Jarvis.py'])
-
+def start_Jarvis():
+    engine = pyttsx3.init()
+    engine.say("Hii sir")
+    engine.runAndWait()
 root = Tk()
 root.title('My App')
 
